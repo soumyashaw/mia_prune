@@ -37,7 +37,8 @@ def main(args):
     random.seed(args.seed)
     np.random.seed(args.seed)
 
-    device = f"cuda:{args.device}"
+    # CHANGE
+    device = f"cuda:{args.device}" if torch.cuda.is_available() else "cpu"
     cudnn.benchmark = True
     save_folder = f"results/{args.dataset_name}_{args.model_name}"
 
