@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
+
 #ResNet18
 d = {'pruner_name': ["L1 Unstructured", "L1 Unstructured", "L1 Unstructured", "L1 Unstructured", "L1 Unstructured",
                      "L1 Structured", "L1 Structured", "L1 Structured", "L1 Structured", "L1 Structured",
@@ -35,5 +36,11 @@ plt.legend(title='Pruner Name')
 plt.show()
 
 
+def main(plot: str) -> None:
+    if plot == "ResNet18":
+        
 
 
+if __name__ == '__main__':
+    plot = "ResNet18"
+    main(plot)
